@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Reem+Kufi+Fun:wght@400..700&display=swap');
+
+.main-banner {
+    padding: 150px 20px 200px; /* تم تعديل القيم لتكون متناسبة مع جميع الشاشات */
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.js-parallax-scene {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* .hero{
+    background-image: url("../../assets/art4.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+} */
+.banner-shape-1 img {
+    position: absolute;
+    left: 75%; /* تعديل الموضع ليكون أكثر تناسباً */
+    top: 40px;
+    max-width: 120px; /* عرض متجاوب */
+    pointer-events: none;
+    filter: blur(3px);
+}
+
+.banner-shape-2 img {
+    position: absolute;
+    bottom: 0;
+    right: 70%; /* تعديل الموضع ليكون متجاوباً */
+    max-width: 300px; /* عرض متجاوب */
+    pointer-events: none;
+    filter: blur(3px);
+}
+
+.h1-title {
+    font-size: 48px;
+    line-height: 56px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    font-weight: 900;
+    color: black;
+    font-family:"Reem Kufi Fun", serif;
+}
+
+.h1-title span {
+    /* color:#fb2d08; */
+    background-image: linear-gradient(0deg, rgb(13 13 37 / 8%), rgb(13 13 37 / 8%));
+    background-size: 100% 8px; /* عرض خلفية النص */
+    background-position: 0 90%;
+    background-repeat: no-repeat;
+    display: inline;
+    transition: 0.8s cubic-bezier(0.22, 0.78, 0.45, 1.02);
+    font-family:"Reem Kufi Fun", serif;
+}
+
+p {
+    font-size: 14px;
+    line-height: 24px;
+    color: #555;
+}
+
+.banner-btn .sec-btn {
+    min-width: 100px;
+    min-height: 48px;
+    background: #f3f3f5;
+    box-shadow: 4px 4px 8px #b2b2b3, -4px -4px 8px #ffffff;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 24px;
+    color: #0d0d25;
+    text-transform: capitalize;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    outline: none !important;
+    transition: 0.8s cubic-bezier(0.22, 0.78, 0.45, 1.02);
+    padding: 6px 20px;
+}
+
+.banner-img-wp {
+    width: 100%;
+    height: auto; /* تعديل الارتفاع */
+    padding-left: 15px;
+    display: flex; /* لتوسيط الصورة */
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+/* .banner-img {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background-color: #fff;
+    animation: plate-wave 3s infinite ease-in-out,flame-curve 2s infinite ease-in-out, plate-glow 1.5s infinite alternate;
+ 
+  } */
+
+ 
+  .banner-img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation: biani 4.5s linear infinite alternate;
+    box-shadow: 0 0px 20px rgba(36, 39, 37, 0.3);
+}
+
+@keyframes biani {
+    0% {
+        border-radius: 48% 52% 57% 43% / 34% 44% 56% 66%;
+    }
+    25% {
+        border-radius: 62% 38% 64% 36% / 34% 55% 45% 66%;
+    }
+    50% {
+        border-radius: 43% 57% 51% 49% / 33% 42% 58% 67%;
+    }
+    100% {
+        border-radius: 40% 60% 43% 57% / 52% 32% 68% 48%;
+    }
+}
+  
+canvas {
+    background-color: rgba(255, 255, 255, 0.1); /* خلفية شفافة */
+}
+
+.banner-img-text {
+    max-width: 300px;
+    text-align: center;
+    margin: 20px auto 0;
+}
+
+.banner-img-text .h5-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+}
+#home{
+    background-image: url("../../assets/471508215_948908010699368_3598634991774392301_n.jpg");
+    min-height: 90vh    
+
+}
+/* استعلامات الوسائط */
+@media (min-width: 1025px) {
+    .main-banner {
+        padding: 120px 15px 150px;
+    }
+
+    .h1-title {
+        font-size:50px;
+        line-height: 60px
+    }
+
+    .banner-shape-1 img {
+        max-width: 100px;
+    }
+
+    .banner-shape-2 img {
+        max-width: 250px;
+    }
+
+    .banner-img {
+        width: 350px;
+        height: 350px;
+    }
+}
+@media (max-width: 1024px) {
+    .main-banner {
+        padding: 120px 15px 150px;
+    }
+
+    .h1-title {
+        font-size: 36px;
+        line-height: 44px;
+        color:black
+    }
+
+    .banner-shape-1 img {
+        max-width: 100px;
+    }
+
+    .banner-shape-2 img {
+        max-width: 250px;
+    }
+
+    .banner-img {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .h1-title {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    .banner-btn .sec-btn {
+        min-width: 90px;
+        min-height: 40px;
+        font-size: 14px;
+        padding: 4px 15px;
+    }
+
+    .banner-shape-1 img,
+    .banner-shape-2 img {
+        max-width: 80px;
+    }
+
+    .banner-img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    .main-banner {
+        padding: 100px 10px 100px;
+        height: 90vh;
+    }
+
+    .h1-title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    p {
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    .banner-img-text {
+        max-width: 240px;
+    }
+
+    .banner-shape-1 img,
+    .banner-shape-2 img {
+        max-width: 60px;
+    }
+
+    .banner-img {
+        width: 150px;
+        height: 150px;
+    }
+}

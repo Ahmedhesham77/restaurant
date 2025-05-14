@@ -1,0 +1,93 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  padding: 10px 25px;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.2); /* شفافية وخلفية خفيفة */
+}
+
+.logo {
+  height: 40px;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.cart-icon{
+  width: 1.5rem;
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  align-items: center;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.login-btn {
+  background-color: transparent;
+  color: tomato;
+  padding: 8px 16px;
+  border: 1px solid tomato;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
+.login-btn:hover{
+  background-color: tomato;
+  color: white;
+}
+.cart-box{
+  position: relative;
+}
+.cart-box .dot{
+  position: absolute;
+  min-width: 10px;
+  min-height: 10px;
+  border-radius: 5px;
+  background-color: tomato;
+  top: -8px;
+  right: -8px;
+}
+@media (max-width: 600px) {
+  .menu-toggle {
+      display: block;
+  }
+
+
+  .navbar-links {
+      display: none;
+      position: absolute;
+      top: 65px;
+      right: 0;
+      background-color: white;
+      flex-direction: column;
+      width: 200px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      z-index: 5;
+      gap: 0;
+      border-radius: 25px;
+  }
+
+  .navbar-links.open {
+      display: flex;
+  }
+
+  .navbar-links li {
+      margin: 15px 0;
+  }
+}
